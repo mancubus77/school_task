@@ -1,0 +1,12 @@
+1234:Jones:49 Arundel Road, Erina Heights, 2260:0412345678
+
+2345:Smith:115 Long Street,Terrigal, 2260:0401234565
+
+3456:MacDonald:89 Main Street, Wyoming, 2250:0419888324
+
+4567:Monty:67 Serpentine Road, Somersby, 2250:0402234512
+
+5678:Saint:134b Smithson Parade, Wamberal, 2260:0498342564
+
+6789:Wiggles:10/14 Charles Kay Drive,Terrigal, 2260:0423123243
+
