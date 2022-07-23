@@ -1,8 +1,8 @@
-from random import choice
+from random import choice, randint
 import time
 
 
-def get_id(in_line: str) -> str:
+def get_id(in_line: str) -> int:
     """
     This function return ID from given line
     :param in_line: input line
@@ -13,7 +13,7 @@ def get_id(in_line: str) -> str:
     element_id = element_list[0]
     id_structure = element_id.split(":")
     id_element = id_structure[0]
-    return id_element
+    return int(id_element)
 
 
 def print_result(elements: list) -> None:
@@ -22,11 +22,11 @@ def print_result(elements: list) -> None:
     :param elements: input list of IDs
     :return: none
     """
-    print(f"Element list: {','.join(elements)}")
+    print(f"Element list: {','.join(str(x) for x in elements)}")
 
     new_id = choice([i for i in range(1000, 9999) if i not in elements])
     print(
-        f"Random id number {new_id} not in {','.join(elements)} -> {new_id not in elements} "
+        f"Random id number {new_id} not in {elements} -> {new_id not in elements} "
     )
 
 
@@ -42,7 +42,7 @@ def run_lazy() -> None:
     with open("customer.txt") as fp:
         for line in fp:
             if line.strip() != "":
-                id_list.append(line.split(",")[0].split(":")[0])
+                id_list.append(int(line.split(",")[0].split(":")[0]))
     print_result(id_list)
 
 
